@@ -77,7 +77,7 @@ void spIkConstraint_apply1 (spBone* bone, float targetX, float targetY, float al
 	if (rotationIK > 180) rotationIK -= 360;
 	else if (rotationIK < -180) rotationIK += 360;
 	spBone_updateWorldTransformWith(bone, bone->x, bone->y, rotation + (rotationIK - rotation) * alpha, bone->appliedScaleX,
-		bone->appliedScaleY);
+		bone->appliedScaleY, bone->shearX, bone->shearY);
 }
 
 void spIkConstraint_apply2 (spBone* parent, spBone* child, float targetX, float targetY, int bendDir, float alpha) {
@@ -207,8 +207,8 @@ void spIkConstraint_apply2 (spBone* parent, spBone* child, float targetX, float 
 		if (a2 > 180) a2 -= 360;
 		else if (a2 < -180) a2 += 360;
 		r = parent->rotation;
-		spBone_updateWorldTransformWith(parent, px, py, r + (a1 - r) * alpha, parent->appliedScaleX, parent->appliedScaleY);
+		spBone_updateWorldTransformWith(parent, px, py, r + (a1 - r) * alpha, parent->appliedScaleX, parent->appliedScaleY, parent->shearX, parent->shearY);
 		r = child->rotation;
-		spBone_updateWorldTransformWith(child, cx, cy, r + (a2 - r) * alpha, child->appliedScaleX, child->appliedScaleY);
+		spBone_updateWorldTransformWith(child, cx, cy, r + (a2 - r) * alpha, child->appliedScaleX, child->appliedScaleY, parent->shearX, parent->shearY);
 	}
 }
