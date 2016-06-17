@@ -62,13 +62,15 @@
 #define DEG_RAD (PI / 180)
 #define RAD_DEG (180 / PI)
 
+#define SIN_DEG(A) sinf((A) * DEG_RAD)
+#define COS_DEG(A) cosf((A) * DEG_RAD)
+#define ABS(A) ((A) < 0? -(A): (A))
+
 #ifdef __STDC_VERSION__
 #define FMOD(A,B) fmodf(A, B)
 #define ATAN2(A,B) atan2f(A, B)
 #define SIN(A) sinf(A)
-#define SIN_DEG(A) sinf((A) * DEG_RAD)
 #define COS(A) cosf(A)
-#define COS_DEG(A) cosf((A) * DEG_RAD)
 #define SQRT(A) sqrtf(A)
 #define ACOS(A) acosf(A)
 #else
