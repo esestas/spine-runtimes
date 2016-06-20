@@ -27,8 +27,9 @@ spine-libgdx/spine-libgdx/bin/*
 spine-libgdx/spine-libgdx-tests/bin/*
 spine-libgdx/spine-skeletonviewer/bin/*
 
-spine-cocos2dx/cocos2dx/
-xcuserdata
+spine-cocos2dx/dependencies
+spine-cocos2dx/example/cocos2d
+xcuserdata/
 
 spine-cocos2d-iphone/cocos2d/*
 spine-cocos2d-iphone/spine-cocos2d-iphone-ios.xcodeproj/project.xcworkspace/xcshareddata/
