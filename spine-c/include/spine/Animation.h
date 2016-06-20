@@ -434,9 +434,9 @@ spTransformConstraintTimeline* spTransformConstraintTimeline_create (int framesC
 void spTransformConstraintTimeline_setFrame (spTransformConstraintTimeline* self, int frameIndex, float time, float rotateMix, float translateMix, float scaleMix, float shearMix);
 
 #ifdef SPINE_SHORT_NAMES
-typedef spIkConstraintTimeline IkConstraintTimeline;
-#define IkConstraintTimeline_create(...) spIkConstraintTimeline_create(__VA_ARGS__)
-#define IkConstraintTimeline_setFrame(...) spIkConstraintTimeline_setFrame(__VA_ARGS__)
+typedef spTransformConstraintTimeline TransformConstraintTimeline;
+#define TransformConstraintTimeline_create(...) spTransformConstraintTimeline_create(__VA_ARGS__)
+#define TransformConstraintTimeline_setFrame(...) spTransformConstraintTimeline_setFrame(__VA_ARGS__)
 #endif
 
 /**/

@@ -137,8 +137,9 @@ void spBone_updateWorldTransformWith (spBone* self, float x, float y, float rota
 			pd = 1;
 			do {
 				float za, zb, zc, zd;
-				float r = parent->appliedRotation; cosine = COS_DEG(r); sine = SIN_DEG(r);
-				float psx = parent->appliedScaleX, psy = parent->appliedScaleY;
+				float r = parent->appliedRotation;
+				float psx = parent->appliedScaleX; float psy = parent->appliedScaleY;
+				cosine = COS_DEG(r); sine = SIN_DEG(r);
 				za = cosine * psx; zb = -sine * psy; zc = sine * psx; zd = cosine * psy;
 				temp = pa * za + pb * zc;
 				pb = pa * zb + pb * zd;

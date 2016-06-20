@@ -27,12 +27,7 @@ spine-libgdx/spine-libgdx/bin/*
 spine-libgdx/spine-libgdx-tests/bin/*
 spine-libgdx/spine-skeletonviewer/bin/*
 
-spine-cocos2dx/2/cocos2dx/
-!spine-cocos2dx/2/cocos2dx/Place cocos2dx here.txt
-spine-cocos2dx/2/example/proj.win32/Debug
-spine-cocos2dx/3/cocos2dx/
-!spine-cocos2dx/3/cocos2dx/Place cocos2dx here.txt
-spine-cocos2dx/3/example/proj.win32/Debug
+spine-cocos2dx/cocos2dx/
 xcuserdata
 
 spine-cocos2d-iphone/cocos2d/*

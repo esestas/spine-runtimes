@@ -465,7 +465,7 @@ void _spColorTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, f
 		int* eventsCount, float alpha) {
 	spSlot *slot;
 	int frame;
-	float prevFrameR, prevFrameG, prevFrameB, prevFrameA, percent, frameTime;
+	float percent, frameTime;
 	float r, g, b, a;
 	spColorTimeline* self = (spColorTimeline*)timeline;
 
@@ -489,10 +489,10 @@ void _spColorTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, f
 		b = self->frames[frame - 2];
 		a = self->frames[frame - 1];
 
-		r += (self->frames[frame + COLOR_R] - prevFrameR) * percent;
-		g += (self->frames[frame + COLOR_G] - prevFrameG) * percent;
-		b += (self->frames[frame + COLOR_B] - prevFrameB) * percent;
-		a += (self->frames[frame + COLOR_A] - prevFrameA) * percent;
+		r += (self->frames[frame + COLOR_R] - r) * percent;
+		g += (self->frames[frame + COLOR_G] - g) * percent;
+		b += (self->frames[frame + COLOR_B] - b) * percent;
+		a += (self->frames[frame + COLOR_A] - a) * percent;
 	}
 	slot = skeleton->slots[self->slotIndex];
 	if (alpha < 1) {
@@ -917,7 +917,7 @@ void _spTransformConstraintTimeline_apply (const spTimeline* timeline, spSkeleto
 	/* Interpolate between the previous frame and the current frame. */
 	frame = binarySearch(self->frames, self->framesCount, time, 5);
 	frameTime = self->frames[frame];
-	percent = 1 - (time - frameTime) / (self->frames[frame + IKCONSTRAINT_PREV_TIME] - frameTime);
+	percent = 1 - (time - frameTime) / (self->frames[frame + TRANSFORMCONSTRAINT_PREV_TIME] - frameTime);
 	percent = spCurveTimeline_getCurvePercent(SUPER(self), frame / 5 - 1, percent < 0 ? 0 : (percent > 1 ? 1 : percent));
 
 	rotate = self->frames[frame + TRANSFORMCONSTRAINT_PREV_ROTATE_MIX];
@@ -947,5 +947,3 @@ void spTransformConstraintTimeline_setFrame (spTransformConstraintTimeline* self
 	self->frames[frameIndex + 3] = scaleMix;
 	self->frames[frameIndex + 4] = shearMix;
 }
-
-/**/
