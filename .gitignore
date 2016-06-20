@@ -27,7 +27,8 @@ spine-libgdx/spine-libgdx/bin/*
 spine-libgdx/spine-libgdx-tests/bin/*
 spine-libgdx/spine-skeletonviewer/bin/*
 
-spine-cocos2dx/dependencies
+spine-cocos2dx/example/cocos2dx.zip
+spine-cocos2dx/example/__MACOSX
 spine-cocos2dx/example/cocos2d
 spine-cocos2dx/example/proj.win32/spine-cocos2d-x.VC.opendb
 xcuserdata/

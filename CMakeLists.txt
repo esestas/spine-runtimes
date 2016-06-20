@@ -6,5 +6,9 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 add_subdirectory(spine-c)
 add_subdirectory(spine-sfml)
-add_subdirectory(spine-cocos2d-iphone)
+
+if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+	add_subdirectory(spine-cocos2d-iphone)
+endif()
+
 add_subdirectory(spine-cocos2dx)
