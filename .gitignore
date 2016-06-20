@@ -29,6 +29,7 @@ spine-libgdx/spine-skeletonviewer/bin/*
 
 spine-cocos2dx/dependencies
 spine-cocos2dx/example/cocos2d
+spine-cocos2dx/example/proj.win32/spine-cocos2d-x.VC.opendb
 xcuserdata/
 
 spine-cocos2d-iphone/cocos2d/*
