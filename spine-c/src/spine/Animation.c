@@ -446,7 +446,7 @@ void _spShearTimeline_apply (const spTimeline* timeline, spSkeleton* skeleton, f
 }
 
 spShearTimeline* spShearTimeline_create (int framesCount) {
-	return _spBaseTimeline_create(framesCount, SP_TIMELINE_SHEAR, 3, _spShearTimeline_apply);
+	return (spShearTimeline*)_spBaseTimeline_create(framesCount, SP_TIMELINE_SHEAR, 3, _spShearTimeline_apply);
 }
 
 void spShearTimeline_setFrame (spShearTimeline* self, int frameIndex, float time, float x, float y) {

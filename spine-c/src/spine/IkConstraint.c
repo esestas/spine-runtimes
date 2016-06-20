@@ -140,11 +140,11 @@ void spIkConstraint_apply2(spBone *parent, spBone *child, float targetX, float t
             cosine = -1;
         else if (cosine > 1) cosine = 1;
         a2 = ACOS(cosine) * bendDir;
-        a = l1 + l2 * cosine, o = l2 * sin(a2);
-        a1 = atan2(ty * a - tx * o, tx * a + ty * o);
+        a = l1 + l2 * cosine, o = l2 * SIN(a2);
+        a1 = ATAN2(ty * a - tx * o, tx * a + ty * o);
     } else {
         float minAngle, minDist, minX, minY, maxAngle, maxDist, maxX, maxY, angle;
-        float a = psx * l2, b = psy * l2, ta = atan2(ty, tx);
+        float a = psx * l2, b = psy * l2, ta = ATAN2(ty, tx);
         float aa = a * a, bb = b * b, ll = l1 * l1, dd = tx * tx + ty * ty;
         float c0 = bb * ll + aa * dd - aa * bb, c1 = -2 * bb * l1, c2 = bb - aa;
         float d = c1 * c1 - 4 * c2 * c0;
@@ -156,8 +156,8 @@ void spIkConstraint_apply2(spBone *parent, spBone *child, float targetX, float t
             r = ABS(r0) < ABS(r1) ? r0 : r1;
             if (r * r <= dd) {
                 y = SQRT(dd - r * r) * bendDir;
-                a1 = ta - atan2(y, r);
-                a2 = atan2(y / psy, (r - l1) / psx);
+                a1 = ta - ATAN2(y, r);
+                a2 = ATAN2(y / psy, (r - l1) / psx);
                 goto outer;
             }
         }
@@ -178,8 +178,8 @@ void spIkConstraint_apply2(spBone *parent, spBone *child, float targetX, float t
             minX = x;
         }
         angle = ACOS(-a * l1 / (aa - bb));
-        x = a * cos(angle) + l1;
-        y = b * sin(angle);
+        x = a * COS(angle) + l1;
+        y = b * SIN(angle);
         d = x * x + y * y;
         if (d < minDist) {
             minAngle = angle;
@@ -194,14 +194,14 @@ void spIkConstraint_apply2(spBone *parent, spBone *child, float targetX, float t
             maxY = y;
         }
         if (dd <= (minDist + maxDist) / 2) {
-            a1 = ta - atan2(minY * bendDir, minX);
+            a1 = ta - ATAN2(minY * bendDir, minX);
             a2 = minAngle * bendDir;
         } else {
-            a1 = ta - atan2(maxY * bendDir, maxX);
+            a1 = ta - ATAN2(maxY * bendDir, maxX);
             a2 = maxAngle * bendDir;
         }
     }
-    os = atan2(cy, cx) * s2;
+    os = ATAN2(cy, cx) * s2;
     a1 = (a1 - os) * RAD_DEG + os1;
     a2 = ((a2 + os) * RAD_DEG - child->shearX) * s2 + os2;
     if (a1 > 180)
