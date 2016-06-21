@@ -54,7 +54,8 @@ The entire example code is contained in [main.cpp](https://github.com/EsotericSo
 
 ### Mac OS X
 1. Install [Xcode](https://developer.apple.com/xcode/)
-2. Install CMake. The easiest way is to install [Homebrew](http://brew.sh/), then open a terminal and install Cmake via `brew install cmake`
+2. Install [Homebrew](http://brew.sh/)
+3. Open a terminal and install CMake via `brew install cmake`
 3. Download the Spine Runtimes repository using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
 4. Open a terminal, and `cd` into the `spine-runtimes/spine-sfml` folder
 5. Type `mkdir build && cd build && cmake -G Xcode ../..` to generate an Xcode project called `spine.xcodeproj`
