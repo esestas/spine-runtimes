@@ -1,6 +1,6 @@
-# spine-cocos2d-iphone v3.0
+# spine-cocos2d-iphone
 
-The spine-cocos2d-iphone runtime provides functionality to load, manipulate and render [Spine](http://esotericsoftware.com) skeletal animation data using [cocos2d-iphone](http://www.cocos2d-iphone.org/). spine-cocos2d-iphone is based on [spine-c](https://github.com/EsotericSoftware/spine-runtimes/tree/master/spine-c).
+The spine-cocos2d-iphone runtime provides functionality to load, manipulate and render [Spine](http://esotericsoftware.com) skeletal animation data using the latest [cocos2d-objc](http://cocos2d-objc.org/). spine-cocos2d-iphone is based on [spine-c](https://github.com/EsotericSoftware/spine-runtimes/tree/master/spine-c).
 
 ## Licensing
 
@@ -10,24 +10,34 @@ The Spine Runtimes are developed with the intent to be used with data exported f
 
 ## Spine version
 
-spine-cocos2d-iphone v3 works with data exported from the latest version of Spine.
+spine-cocos2d-iphone works with data exported from the latest version of Spine.
 
-spine-cocos2d-iphone v3 supports all Spine features.
+spine-cocos2d-iphone supports all Spine features.
 
-spine-cocos2d-iphone v3 does not yet support loading the binary format.
+spine-cocos2d-iphone does not yet support loading the binary format.
 
-## Setup
+## Usage
 
-1. Download the Spine Runtimes source using [git](https://help.github.com/articles/set-up-git) or by downloading it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip).
-1. Place the contents of a cocos2d version 3.1 (or higher) distribution into the `spine-cocos2d-iphone/3/cocos2d` directory.
-1. Open the Xcode project file for iOS or Mac from the `spine-cocos2d-iphone/3` directory.
+1. Create a new cocos2d-obj project. See the [cocos2d-objc documentation](http://cocos2d-objc.org/started/) or have a look at the example in this repository.
+2. Download the Spine Runtimes source using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
+3. Add the sources from `spine-c/src/spine` and `spine-cocos2d-iphone/src/spine` to your project
+4. Add the folders `spine-c/include` and `spine-cocos2d-objc/src` to your header search path. Note that includes are specified as `#inclue <spine/file.h>`, so the `spine` directory cannot be omitted when copying the source files.
 
-Alternatively, the contents of the `spine-c/src`, `spine-c/include` and `spine-cocos2d-iphone/3/src` directories can be copied into your project. Be sure your header search path will find the contents of the `spine-c/include` and `spine-cocos2d-iphone/3/src` directories. Note that the includes use `spine/Xxx.h`, so the `spine` directory cannot be omitted when copying the files.
+See the [Spine Runtimes documentation](http://esotericsoftware.com/spine-documentation#runtimesTitle) on how to use the APIs or check out the Spine cocos2d-objc example.
 
 ## Examples
 
-[Spineboy](https://github.com/EsotericSoftware/spine-runtimes/blob/master/spine-cocos2d-iphone/3/example/SpineboyExample.m)
-[Golbins](https://github.com/EsotericSoftware/spine-runtimes/blob/master/spine-cocos2d-iphone/3/example/GoblinsExample.m)
+The Spine cocos2d-objc example works on iOS simulators and devices.
+
+### iOS
+1. Install [Xcode](https://developer.apple.com/xcode/)
+2. Install [Homebrew](http://brew.sh/)
+3. Open a terminal and install CMake via `brew install cmake`
+3. Download the Spine Runtimes repository using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
+4. Open a terminal, and `cd` into the `spine-runtimes/spine-objc` folder
+5. Type `mkdir build && cd build && cmake ../..`, this will download the cocos2d-objc dependency
+6. Open the Xcode project in `spine-runtimes/spine-cocos2d-iphone/spine-cocos2d-iphone-ios.xcodeproj/`
+7. In Xcode, click the `Run` button or type `CMD+R` to run the example on the simulator
 
 ## Links
 
