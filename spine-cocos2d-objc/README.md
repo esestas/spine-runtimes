@@ -34,7 +34,7 @@ The Spine cocos2d-objc example works on iOS simulators and devices.
 2. Install [Homebrew](http://brew.sh/)
 3. Open a terminal and install CMake via `brew install cmake`
 3. Download the Spine Runtimes repository using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
-4. Open a terminal, and `cd` into the `spine-runtimes/spine-objc` folder
+4. Open a terminal, and `cd` into the `spine-runtimes/spine-cocos2d-objc` folder
 5. Type `mkdir build && cd build && cmake ../..`, this will download the cocos2d-objc dependency
 6. Open the Xcode project in `spine-runtimes/spine-cocos2d-objc/spine-cocos2d-objc.xcodeproj/`
 7. In Xcode, click the `Run` button or type `CMD+R` to run the example on the simulator
