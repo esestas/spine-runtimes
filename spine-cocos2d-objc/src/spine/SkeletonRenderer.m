@@ -30,7 +30,7 @@
  *****************************************************************************/
 
 #import <spine/SkeletonRenderer.h>
-#import <spine/spine-cocos2d-iphone.h>
+#import <spine/spine-cocos2d-objc.h>
 #import <spine/extension.h>
 #import "CCDrawNode.h"
 

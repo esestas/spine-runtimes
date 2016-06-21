@@ -30,7 +30,7 @@
  *****************************************************************************/
 
 #import "cocos2d.h"
-#import <spine/spine-cocos2d-iphone.h>
+#import <spine/spine-cocos2d-objc.h>
 
 @interface GoblinsExample : CCNode {
 	SkeletonAnimation* skeletonNode;

@@ -12,7 +12,7 @@
 		431FF7F51C735D8D00D52DF2 /* WeightedMeshAttachment.c in Sources */ = {isa = PBXBuildFile; fileRef = 431FF7F21C735D8D00D52DF2 /* WeightedMeshAttachment.c */; };
 		43B7CC0919DC4ACD0031321C /* IkConstraint.c in Sources */ = {isa = PBXBuildFile; fileRef = 43B7CC0719DC4ACD0031321C /* IkConstraint.c */; };
 		43B7CC0A19DC4ACD0031321C /* IkConstraintData.c in Sources */ = {isa = PBXBuildFile; fileRef = 43B7CC0819DC4ACD0031321C /* IkConstraintData.c */; };
-		43C3282F170B0C19004A9460 /* spine-cocos2d-iphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C3282D170B0C19004A9460 /* spine-cocos2d-iphone.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		43C3282F170B0C19004A9460 /* spine-cocos2d-objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C3282D170B0C19004A9460 /* spine-cocos2d-objc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		43C3286C170B0DA6004A9460 /* spineboy.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C32868170B0DA6004A9460 /* spineboy.json */; };
 		43C3286E170B0DA6004A9460 /* spineboy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 43C3286A170B0DA6004A9460 /* spineboy.atlas */; };
 		43C3286F170B0DA6004A9460 /* spineboy.png in Resources */ = {isa = PBXBuildFile; fileRef = 43C3286B170B0DA6004A9460 /* spineboy.png */; };
@@ -122,8 +122,8 @@
 		43B7CC0819DC4ACD0031321C /* IkConstraintData.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IkConstraintData.c; path = "../spine-c/src/spine/IkConstraintData.c"; sourceTree = "<group>"; };
 		43B7CC0D19DC4AE30031321C /* IkConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IkConstraint.h; path = "../spine-c/include/spine/IkConstraint.h"; sourceTree = "<group>"; };
 		43B7CC0E19DC4AE30031321C /* IkConstraintData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IkConstraintData.h; path = "../spine-c/include/spine/IkConstraintData.h"; sourceTree = "<group>"; };
-		43C3282D170B0C19004A9460 /* spine-cocos2d-iphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "spine-cocos2d-iphone.m"; path = "src/spine/spine-cocos2d-iphone.m"; sourceTree = "<group>"; };
-		43C3282E170B0C19004A9460 /* spine-cocos2d-iphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "spine-cocos2d-iphone.h"; path = "src/spine/spine-cocos2d-iphone.h"; sourceTree = "<group>"; };
+		43C3282D170B0C19004A9460 /* spine-cocos2d-objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "spine-cocos2d-objc.m"; path = "src/spine/spine-cocos2d-objc.m"; sourceTree = "<group>"; };
+		43C3282E170B0C19004A9460 /* spine-cocos2d-objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "spine-cocos2d-objc.h"; path = "src/spine/spine-cocos2d-objc.h"; sourceTree = "<group>"; };
 		43C32868170B0DA6004A9460 /* spineboy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = spineboy.json; path = Resources/spineboy.json; sourceTree = "<group>"; };
 		43C3286A170B0DA6004A9460 /* spineboy.atlas */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = spineboy.atlas; path = Resources/spineboy.atlas; sourceTree = "<group>"; };
 		43C3286B170B0DA6004A9460 /* spineboy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spineboy.png; path = Resources/spineboy.png; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				43C32822170B0BC2004A9460 /* spine-c */,
-				43C32823170B0BC7004A9460 /* spine-cocos2d-iphone */,
+				43C32823170B0BC7004A9460 /* spine-cocos2d-objc */,
 				43F7FF8C1927F96700CA4038 /* SpineboyExample.h */,
 				43F7FF8D1927F96700CA4038 /* SpineboyExample.m */,
 				43F7FF8A1927F96700CA4038 /* GoblinsExample.h */,
@@ -331,17 +331,17 @@
 			name = "spine-c";
 			sourceTree = "<group>";
 		};
-		43C32823170B0BC7004A9460 /* spine-cocos2d-iphone */ = {
+		43C32823170B0BC7004A9460 /* spine-cocos2d-objc */ = {
 			isa = PBXGroup;
 			children = (
 				43F7FF831927F94800CA4038 /* SkeletonAnimation.h */,
 				43F7FF841927F94800CA4038 /* SkeletonAnimation.m */,
 				43F7FF851927F94800CA4038 /* SkeletonRenderer.h */,
 				43F7FF861927F94800CA4038 /* SkeletonRenderer.m */,
-				43C3282E170B0C19004A9460 /* spine-cocos2d-iphone.h */,
-				43C3282D170B0C19004A9460 /* spine-cocos2d-iphone.m */,
+				43C3282E170B0C19004A9460 /* spine-cocos2d-objc.h */,
+				43C3282D170B0C19004A9460 /* spine-cocos2d-objc.m */,
 			);
-			name = "spine-cocos2d-iphone";
+			name = "spine-cocos2d-objc";
 			sourceTree = "<group>";
 		};
 		43C32867170B0C7F004A9460 /* Resources */ = {
@@ -440,7 +440,7 @@
 				43CA503B1CAF6E78005ABFFC /* PBXTargetDependency */,
 			);
 			name = SpineExample;
-			productName = "spine-cocos2d-iphone-ios";
+			productName = "spine-cocos2d-objc";
 			productReference = 9A5D2495170A94DA0030D4DD /* SpineExample.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -453,7 +453,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Craig Hinrichs";
 			};
-			buildConfigurationList = 9A5D2490170A94DA0030D4DD /* Build configuration list for PBXProject "spine-cocos2d-iphone-ios" */;
+			buildConfigurationList = 9A5D2490170A94DA0030D4DD /* Build configuration list for PBXProject "spine-cocos2d-objc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -539,7 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43C3282F170B0C19004A9460 /* spine-cocos2d-iphone.m in Sources */,
+				43C3282F170B0C19004A9460 /* spine-cocos2d-objc.m in Sources */,
 				43C32A06170B0F93004A9460 /* main.m in Sources */,
 				43C32A09170B10FF004A9460 /* AppDelegate.m in Sources */,
 				43F7FF511927F91900CA4038 /* Animation.c in Sources */,
@@ -708,7 +708,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9A5D2490170A94DA0030D4DD /* Build configuration list for PBXProject "spine-cocos2d-iphone-ios" */ = {
+		9A5D2490170A94DA0030D4DD /* Build configuration list for PBXProject "spine-cocos2d-objc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A5D2641170A94DC0030D4DD /* Debug */,

@@ -29,7 +29,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
-#import <spine/spine-cocos2d-iphone.h>
+#import <spine/spine-cocos2d-objc.h>
 #import <spine/extension.h>
 
 void _spAtlasPage_createTexture (spAtlasPage* self, const char* path) {

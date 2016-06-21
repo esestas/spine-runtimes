@@ -30,7 +30,7 @@
  *****************************************************************************/
 
 #import <spine/SkeletonAnimation.h>
-#import <spine/spine-cocos2d-iphone.h>
+#import <spine/spine-cocos2d-objc.h>
 #import <spine/extension.h>
 
 static void animationCallback (spAnimationState* state, int trackIndex, spEventType type, spEvent* event, int loopCount) {
