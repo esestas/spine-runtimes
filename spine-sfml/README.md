@@ -33,7 +33,7 @@ The Spine SFML example works on Windows, Linux and Mac OS X.
 3. Download the Spine Runtimes repository using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
 4. Run CMake GUI from the start menu
 5. Click `Browse Source` and select the directory `spine-runtimes`
-6. Click `Browse Build` and select the `spine-runtimes/spine-sfml/build` directory. You will have to create the `build` folder.
+6. Click `Browse Build` and select the `spine-runtimes/spine-sfml/build` directory. You can create the `build` folder directly in the file dialog via `New Folder`.
 7. Click `Configure`. This will create a Visual Studio 2015 solution file called `spine.sln` in `spine-runtimes/spine-sfml/build` and also download the SFML dependencies.
 8. Open the `spine.sln` file in Visual Studio 2015
 9. Right click the `spine-sfml` project in the solution explorer and select `Set as Startup Project` from the context menu
