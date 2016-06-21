@@ -27,7 +27,7 @@ See the [Spine Runtimes documentation](http://esotericsoftware.com/spine-documen
 ## Example
 The Spine SFML example works on Windows, Linux and Mac OS X.
 
-### Running on Windows
+### Windows
 1. Install [Visual Studio 2015 Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)
 2. Install CMake via the [Windows installer package](https://cmake.org/download/).
 3. Download the Spine Runtimes repository using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
@@ -43,7 +43,7 @@ The Spine SFML example works on Windows, Linux and Mac OS X.
 
 The entire example code is contained in [main.cpp](https://github.com/EsotericSoftware/spine-runtimes/blob/master/spine-sfml/example/main.cpp#L61)
 
-### Running on Linux
+### Linux
 1. Install the SFML dependencies, e.g. on Ubuntu/Debian via `sudo apt-get install -y libpthread-stubs0-dev libgl1-mesa-dev libx11-dev libxrandr-dev libfreetype6-dev libglew1.5-dev libjpeg8-dev libsndfile1-dev libopenal-dev libudev-dev libxcb-image0-dev libjpeg-dev libflac-dev`
 2. Install CMake, e.g. on Ubuntu/Debian via `sudo apt-get install -y cmake`
 3. Download the Spine Runtimes repository using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
