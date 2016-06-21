@@ -22,6 +22,8 @@ spine-sfml does not yet support loading the binary format.
 3. Add the sources from `spine-c/src/spine` and `spine-sfml/src/spine` to your project
 4. Add the folder `spine-c/include` to your header search path. Note that includes are specified as `#inclue <spine/file.h>`, so the `spine` directory cannot be omitted when copying the source files.
 
+See the [Spine Runtimes documentation](http://esotericsoftware.com/spine-documentation#runtimesTitle) on how to use the APIs or check out the Spine SFML example.
+
 ## Example
 The Spine SFML example works on Windows, Linux and Mac OS X.
 
@@ -40,6 +42,25 @@ The Spine SFML example works on Windows, Linux and Mac OS X.
 12. Click `Local Windows Debugger` to run the example
 
 The entire example code is contained in [main.cpp](https://github.com/EsotericSoftware/spine-runtimes/blob/master/spine-sfml/example/main.cpp#L61)
+
+### Running on Linux
+1. Install the SFML dependencies, e.g. on Ubuntu/Debian via `sudo apt-get install -y libpthread-stubs0-dev libgl1-mesa-dev libx11-dev libxrandr-dev libfreetype6-dev libglew1.5-dev libjpeg8-dev libsndfile1-dev libopenal-dev libudev-dev libxcb-image0-dev libjpeg-dev libflac-dev`
+2. Install CMake, e.g. on Ubuntu/Debian via `sudo apt-get install -y cmake`
+3. Download the Spine Runtimes repository using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
+4. Open a terminal, and `cd` into the `spine-runtimes/spine-sfml` folder
+5. Type `mkdir build && cd build && cmake ../..` to generate Make files
+6. Type `make` to compile the example
+7. Run the example by `cd spine-sfml-example && ./spine-sfml-example`
+
+### Mac OS X
+1. Install [Xcode](https://developer.apple.com/xcode/)
+2. Install CMake. The easiest way is to install [Homebrew](http://brew.sh/), then open a terminal and install Cmake via `brew install cmake`
+3. Download the Spine Runtimes repository using git (`git clone https://github.com/esotericsoftware/spine-runtimes`) or download it [as a zip](https://github.com/EsotericSoftware/spine-runtimes/archive/master.zip)
+4. Open a terminal, and `cd` into the `spine-runtimes/spine-sfml` folder
+5. Type `mkdir build && cd build && cmake -G Xcode ../..` to generate an Xcode project called `spine.xcodeproj`
+6. Open the Xcode project in `spine-runtimes/spine-sfml/build/`
+7. In Xcode, set the active scheme from `ALL_BUILD` to `spine-sfml-example`
+8. Click the `Run` button or type `CMD+R` to run the example
 
 ## Notes
 
